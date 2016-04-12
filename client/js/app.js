@@ -1,5 +1,5 @@
 
-var atApp = angular.module('atApp', ['ngRoute', 'ngResource', 'firebase']);
+var atApp = angular.module('atApp', ['ngRoute', 'ngResource']);
 
 
 

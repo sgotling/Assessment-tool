@@ -1,0 +1,32 @@
+<h1>Ny fråga</h1>
+
+
+<form>
+Fråga: <input type="text" ng-model="question.content">
+<div ng-repeat="ans in question.answers track by $index">
+	{{ans}}
+	<button ng-click="remove(question.answers, $index)">Ta bort</button>
+</div>
+<div>
+	<form>
+		Svar: <input type="text" ng-model="ans">
+		<input type="submit" value="Lägg till svar" ng-click="addAnswer(ans); ans=''">
+	</form>
+
+</div>
+</form>
+
+
+<button ng-click="addQuestion(question); question.content=''">Lägg till fråga</button>
+
+
+
+<h1>Frågor</h1>
+
+<div ng-repeat="quest in questions">
+	<h1>{{quest.content}}</h1>
+	<h3>Svar:</h3>
+	<div ng-repeat="answer in quest.answers">
+		{{answer}}
+	</div>
+</div>
