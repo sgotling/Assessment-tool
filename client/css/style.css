@@ -1,0 +1,35 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  margin: 0;
+}
+main {
+  width: 100%;
+  float: left;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+}
+.title {
+  background-color: #34495e;
+  color: #fff;
+  font-family: "helvetica";
+  padding: 0.5em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+.student-form {
+  width: 80%;
+  background-color: #fff;
+  margin: 0 auto 5em auto;
+  font-family: "helvetica";
+  border: 1px solid #d2d2d2;
+}
+.question-box {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 1em;
+}
