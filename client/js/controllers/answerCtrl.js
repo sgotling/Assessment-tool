@@ -17,6 +17,9 @@ atApp.controller('AnswerCtrl', function ($scope, $sce, AT, $location) {
 		$location.path('/');
 		$location.replace();
 	}
+	/*
+	Go to home if the page is updated.
+	*/
 	if (AT.getLoadedFrom() === null) {
 		goHome();
 	}
