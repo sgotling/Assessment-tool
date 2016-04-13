@@ -1,13 +1,17 @@
 
 var routes = function ($routeProvider) {
-    $routeProvider
-    .when('/', {
+  $routeProvider.
+    when('/', {
     	templateUrl	: 'views/home.html',
-        //controller: 'HomeCtrl'
-      }).
-      otherwise({
-      	redirectTo	: '/'
-      });
+      controller: 'HomeCtrl'
+    }).
+    when('/answer', {
+    	templateUrl : 'views/answer.html',
+    	controller  : 'AnswerCtrl'
+    }).
+    otherwise({
+    	redirectTo	: '/'
+    });
 
 }
 

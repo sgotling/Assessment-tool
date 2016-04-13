@@ -1,0 +1,82 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  margin: 0;
+}
+main {
+  width: 100%;
+  float: left;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+}
+.home {
+  background-image: url("https://pixabay.com/static/uploads/photo/2016/02/07/21/11/computer-1185637_960_720.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 10%;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+.home form {
+  margin: 20% auto;
+  font-family: "helvetica";
+  width: 30%;
+}
+.home input {
+  border: none;
+  padding: 0.2em;
+  font-size: 2em;
+  text-align: center;
+  background-color: rgba(255,255,255,0.9);
+  width: 79%;
+  float: left;
+}
+.home span {
+  padding: 0.2em;
+  font-size: 2em;
+  text-align: center;
+  background-color: #34495e;
+  color: #fff;
+  width: 13%;
+  float: left;
+}
+.home span:hover {
+  cursor: pointer;
+}
+.title {
+  background-color: #34495e;
+  color: #fff;
+  font-family: "helvetica";
+  padding: 0.5em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+.student-form {
+  width: 80%;
+  background-color: #fff;
+  margin: 0 auto 5em auto;
+  font-family: "helvetica";
+  border: 1px solid #d2d2d2;
+}
+.student-form button {
+  border: none;
+  background-color: #34495e;
+  color: #fff;
+  font-family: "helvetica";
+  font-size: 2em;
+  width: 100%;
+  padding: 0.2em;
+}
+.student-form button:hover {
+  cursor: pointer;
+  background-color: #566b80;
+}
+.question-box {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 1em;
+}
