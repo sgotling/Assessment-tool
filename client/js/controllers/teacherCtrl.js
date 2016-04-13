@@ -1,21 +1,22 @@
-atApp.controller('teacherCtrl', function ($scope) {
+atApp.controller('teacherCtrl', function ($scope, DB) {
 	// alert();
-	$scope.questions = [];
-	$scope.question = {};
-	$scope.question.answers = [];
+	$scope.qs = DB.getQs();
+	$scope.q = {};
+	$scope.q.a = [];
+	$scope.types=["select", "input", "radio", "check"];
 
-	$scope.addQuestion = function (question) {
-		var quest = angular.copy(question);
-		$scope.questions.push(quest);
-		$scope.question = {};
-		$scope.question.answers = [];
-		console.log($scope.questions);
+	$scope.addQuestion = function (q) {
+		var qCopy = angular.copy(q);
+		DB.setQs(q);
+		$scope.q = {};
+		$scope.q.a = [];
+		console.log($scope.qs);
 
 	}
 	
-	$scope.addAnswer = function (ans) {
-		var a = angular.copy(ans);
-		$scope.question.answers.push(a);
+	$scope.addAnswer = function (a) {
+		var aCopy = angular.copy(a);
+		$scope.q.a.push(aCopy);
 	}
 
 	$scope.remove = function (array, index) {

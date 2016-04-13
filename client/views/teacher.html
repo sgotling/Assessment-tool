@@ -1,32 +1,39 @@
-<h1>Ny fråga</h1>
 
+<main>
+	<div class="teacher-form">
 
-<form>
-Fråga: <input type="text" ng-model="question.content">
-<div ng-repeat="ans in question.answers track by $index">
-	{{ans}}
-	<button ng-click="remove(question.answers, $index)">Ta bort</button>
-</div>
-<div>
-	<form>
-		Svar: <input type="text" ng-model="ans">
-		<input type="submit" value="Lägg till svar" ng-click="addAnswer(ans); ans=''">
-	</form>
+		<h1 class="title">Undersökningar</h1>
+		
+		<form class="question-box">
+			<h1>Ny fråga</h1>
+			<h2>Fråga</h2>
+			<input type="text" ng-model="q.q">
+			<h2>Typ</h2>
+			<select ng-model="q.t"><option ng-repeat='t in types' ng-value="t">{{t}}</option></select>
+			<form>
+				<h2>Svarsalternativ</h2>	
+				<input type="text" ng-model="ans">
+				<input type="submit" value="Lägg till" ng-click="addAnswer(ans); ans=''">
+				<div ng-repeat="ans in q.a track by $index">
+					<button ng-click="remove(q.a, $index)"> X</button>
+					{{ans}}
+				</div>
+				<br><button ng-click="addQuestion(q); q.q=''">Lägg till fråga</button>
+			</form>
+		</form>
 
-</div>
-</form>
+		<div class="question-box" ng-repeat="qu in qs">
+			<h1>Frågor</h1>
+			<h2>{{qu.q}}</h2>
+			<h3>Typ</h3>
+			{{qu.t}}
+			<h3>Svarsalternativ</h3>
+			<div ng-repeat="a in qu.a">
+				{{a}}
+			</div>
+		</div>
 
-
-<button ng-click="addQuestion(question); question.content=''">Lägg till fråga</button>
-
-
-
-<h1>Frågor</h1>
-
-<div ng-repeat="quest in questions">
-	<h1>{{quest.content}}</h1>
-	<h3>Svar:</h3>
-	<div ng-repeat="answer in quest.answers">
-		{{answer}}
 	</div>
-</div>
+</main>
+
+
