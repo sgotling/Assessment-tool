@@ -1,0 +1,19 @@
+<form class="">
+		<h2>Fråga</h2>
+	<input type="text" ng-model="q.q">
+	<h2>Typ</h2>
+	<select class="select" ng-model="q.t"><option ng-repeat='t in types' ng-value="t">{{t}}</option></select>
+	<form>
+		<div ng-show="showAns(q.t)">
+			<h2>Svarsalternativ</h2>	
+			<input type="text" ng-model="ans">
+			<input type="submit" value="Lägg till" ng-click="addAnswer(ans); ans=''">
+			<div class="answers" ng-repeat="ans in q.a track by $index">
+				<button ng-click="remove(q.a, $index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+				{{ans}}
+			</div>			
+		</div>
+
+		<br><button ng-click="addQuestion(q); clearQ(); var.newQ=false;">Lägg till fråga</button>
+	</form>
+</form>

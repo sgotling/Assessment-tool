@@ -1,0 +1,18 @@
+<div class="">
+	<h1 class="title">Nytt formulär</h1>
+	<h1>Titel</h1>
+	<form>
+		<input type="text" ng-model="var.f.title">
+	</form>
+	<div class="question-box" ng-repeat="qu in var.f.q track by $index">
+		<h2>{{qu.q}}</h2>
+		<h3>Typ</h3>
+		{{qu.t}}
+		<h3>Svarsalternativ</h3>
+		<div ng-repeat="a in qu.a track by $index">
+			{{a}}
+		</div>
+	</div>
+	<div ng-include="'views/newQuestion.html'" ng-show="var.newForm==true"></div>
+	<button ng-click="var.newForm=false; addForm(var.f); clearF()" ng-show="var.newForm==true">Lägg till frågeformulär</button>
+</div>

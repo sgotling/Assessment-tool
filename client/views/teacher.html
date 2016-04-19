@@ -1,39 +1,13 @@
 
-<main>
-	<div class="teacher-form">
-
-		<h1 class="title">Undersökningar</h1>
-		
-		<form class="question-box">
-			<h1>Ny fråga</h1>
-			<h2>Fråga</h2>
-			<input type="text" ng-model="q.q">
-			<h2>Typ</h2>
-			<select ng-model="q.t"><option ng-repeat='t in types' ng-value="t">{{t}}</option></select>
-			<form>
-				<h2>Svarsalternativ</h2>	
-				<input type="text" ng-model="ans">
-				<input type="submit" value="Lägg till" ng-click="addAnswer(ans); ans=''">
-				<div ng-repeat="ans in q.a track by $index">
-					<button ng-click="remove(q.a, $index)"> X</button>
-					{{ans}}
-				</div>
-				<br><button ng-click="addQuestion(q); q.q=''">Lägg till fråga</button>
-			</form>
-		</form>
-
-		<div class="question-box" ng-repeat="qu in qs">
-			<h1>Frågor</h1>
-			<h2>{{qu.q}}</h2>
-			<h3>Typ</h3>
-			{{qu.t}}
-			<h3>Svarsalternativ</h3>
-			<div ng-repeat="a in qu.a">
-				{{a}}
-			</div>
-		</div>
-
+<div class="teacher">
+	<h1 class="title" ng-hide="var.newForm==true">Undersökningar</h1>
+	<button ng-click="var.newForm=true" ng-hide="var.newForm==true">Nytt frågeformulär</button>
+	<div ng-include="'views/newForm.html'" ng-show="var.newForm==true"></div>
+	<div class="my-forms" ng-repeat="form in var.fs track by $index" ng-hide="var.newForm">
+		{{form.title}}
+		<i class="fa fa-play" aria-hidden="true"></i>
+		<i class="fa fa-pencil" aria-hidden="true"></i>
 	</div>
-</main>
+</div>
 
 
