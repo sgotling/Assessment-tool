@@ -10,6 +10,9 @@ atApp.controller('AnswerCtrl', function ($scope, $sce, AT, $location) {
 		check  : "<div ng-repeat='a in q.a'><input type='checkbox' ng-model='answers[q.q][a]'>{{a}}<br></div> "
 	}
 
+	$scope.addAns = function (a) {
+		AT.answer(a);
+	}
 	$scope.trust = function (elem) {
 		return $sce.trustAsHtml(elem);
 	}

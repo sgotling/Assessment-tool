@@ -1,4 +1,3 @@
-
 var routes = function ($routeProvider) {
   $routeProvider.
     when('/', {
@@ -8,10 +7,15 @@ var routes = function ($routeProvider) {
     when('/answer', {
     	templateUrl : 'views/answer.html',
     	controller  : 'AnswerCtrl'
-    }).
-    otherwise({
+    })
+    .when('/teacher', {
+    	templateUrl	: 'views/teacher.html',
+        controller: 'teacherCtrl'
+      })
+    .otherwise({
     	redirectTo	: '/'
     });
+
 
 }
 

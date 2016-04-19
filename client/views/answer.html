@@ -5,6 +5,7 @@
 		<h1 class="title">Question</h1>
 		<form ng-model="answer">
 			Answer {{answers}}
+			{{qs}}
 			<div ng-repeat="q in qs track by $index" class="question-box">
 				
 				<h2>{{q.q}}</h2>
@@ -13,7 +14,7 @@
 
 			</div>
 
-			<button>Submit</button>
+			<button ng-click="addAns(answers)">Submit</button>
 		</form>
 	</div>
 
