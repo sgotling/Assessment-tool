@@ -27,32 +27,34 @@ atApp.factory('AT',function ($resource, $firebase, $firebaseObject) {
 		rootRef.child(q.id).push(a);
 	}
 
-	var testForm = {test : [
+	var testForm = {
+		test : [
 		{
 			q : "What is your name?",
 			t : "input",
-			a : ["bla 1", "bla 2", "bla 3"],
-			id : "1"
+			a : "",
+			id : "q0"
 		},
 		{
 			q : "What is your age?",
 			t : "select",
 			a : ["18-20", "20-25", "25-30"],
-			id: "2"
+			id: "q1"
 		},
 		{
 			q : "How satisfied are you?",
 			t : "radio",
 			a : [">(",":(", ":|", ":)", ":D"],
-			id: "3"
+			id: "q2"
 		},
 		{
 			q : "What is an arduino?",
 			t : "check",
-			a : ["motor", "processor", "micro controller", "Small computer"],
-			id: "4"
+			a : [{text:"bla 1",id:'a0'}, {text:"bla 2",id:"a1"}, {text:"bla 3",id:"a2"}],
+			id: "q3"
 		},
 	]};
+
 
 
 	return this;
