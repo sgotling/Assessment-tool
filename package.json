@@ -1,0 +1,20 @@
+{
+  "version": "0.0.1",
+  "private": true,
+  "name": "AssessmentTool",
+  "description": "Answer questions",
+  "repository": "",
+  "license": "",
+  "devDependencies": {
+    "http-server": "^0.6.1"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "start": "http-server client/ -a 0.0.0.0 -p 8000"
+  },
+  "config": {
+    "unsafe-perm": true
+  },
+  "dependencies": {
+  }
+}
