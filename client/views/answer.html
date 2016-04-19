@@ -4,6 +4,7 @@
 	<div class="student-form" ng-controller="AnswerCtrl">
 		<h1 class="title">Question</h1>
 		<form ng-model="answer">
+			Answer {{answers}}
 			<div ng-repeat="q in qs track by $index" class="question-box">
 				
 				<h2>{{q.q}}</h2>

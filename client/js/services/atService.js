@@ -15,12 +15,14 @@ atApp.factory('AT',function ($resource, $firebase, $firebaseObject) {
 		var F = $firebaseObject(ref);
 		return F.$loaded(function () {
 			loadedForm = F;
+			console.log("loadedForm");
+			console.log(loadedForm);
 		});
 		
 		
 	}
 	this.getLoadedFrom = function () {
-		return loadedForm;
+		return testForm.test;
 	}
 
 	this.answer = function (q, a) {
@@ -31,7 +33,6 @@ atApp.factory('AT',function ($resource, $firebase, $firebaseObject) {
 		{
 			q : "What is your name?",
 			t : "input",
-			a : ["bla 1", "bla 2", "bla 3"],
 			id : "1"
 		},
 		{
