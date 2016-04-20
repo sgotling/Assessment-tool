@@ -1,7 +1,6 @@
 atApp.controller('AnswerCtrl', function ($scope, $sce, AT, $location) {
 
-	$scope.qs = AT.getLoadedFrom();
-	console.log($scope.qs)
+	$scope.f = AT.getLoadedForm();
 	$scope.answers = {};
 	$scope.templates = {
 		select : "<select ng-model='answers[q.q]'><option ng-repeat='a in q.a'>{{a}}</option></select>",
@@ -10,8 +9,8 @@ atApp.controller('AnswerCtrl', function ($scope, $sce, AT, $location) {
 		check  : "<div ng-repeat='a in q.a'><input type='checkbox' ng-model='answers[q.q][a]'>{{a}}<br></div> "
 	}
 
-	$scope.addAns = function (a) {
-		AT.answer(a);
+	$scope.addAns = function (f, a) {
+		AT.answer(f, a);
 	}
 	$scope.trust = function (elem) {
 		return $sce.trustAsHtml(elem);
@@ -24,7 +23,7 @@ atApp.controller('AnswerCtrl', function ($scope, $sce, AT, $location) {
 	/*
 	Go to home if the page is updated.
 	*/
-	if (AT.getLoadedFrom() === null) {
+	if (AT.getLoadedForm() === null) {
 		goHome();
 	}
 	

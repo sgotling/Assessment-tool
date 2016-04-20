@@ -4,9 +4,8 @@
 	<div class="student-form" ng-controller="AnswerCtrl">
 		<h1 class="title">Question</h1>
 		<form ng-model="answer">
-			Answer {{answers}}
-			{{qs}}
-			<div ng-repeat="q in qs track by $index" class="question-box">
+
+			<div ng-repeat="q in f.q track by $index" class="question-box">
 				
 				<h2>{{q.q}}</h2>
 
@@ -14,7 +13,7 @@
 
 			</div>
 
-			<button ng-click="addAns(answers)">Submit</button>
+			<button ng-click="addAns(f, answers)">Submit</button>
 		</form>
 	</div>
 

@@ -2,7 +2,7 @@ var routes = function ($routeProvider) {
   $routeProvider.
     when('/', {
     	templateUrl	: 'views/home.html',
-      controller: 'HomeCtrl'
+        controller: 'HomeCtrl'
     }).
     when('/answer', {
     	templateUrl : 'views/answer.html',

@@ -11,7 +11,16 @@ atApp.controller('teacherCtrl', function ($scope, AT) {
 		
 	}
 	$scope.var.f.q = []
+	AT.loadAllForms();
+	var allForms = AT.getAllForms();
 
+
+	// Ett fulhack! Se till att kolla när värde har laddats istället
+	setTimeout(function () {
+		$scope.allForms = AT.getAllForms();
+		$scope.$apply()
+	},
+	1000);
 	
 
 	$scope.addForm = function (f) {
@@ -57,3 +66,24 @@ atApp.controller('teacherCtrl', function ($scope, AT) {
 		}
 	}
 });
+
+
+
+
+
+
+	// $scope.allForms = AT.getAllForms();
+	// $scope.$watch('allForms', function() {
+ //        $scope.$apply();
+ //    });
+
+ //    var goTo = function (path) {
+	// 	// $location.path(path);
+	// 	// $location.replace();
+	// }
+	// /*
+	// Go to home if the page is updated.
+	// */
+	// // if (AT.getLoadedForm() === null) {
+	// // 	goTo("/teacher");
+	// // }
