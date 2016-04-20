@@ -1,8 +1,10 @@
 <div ng-include="'views/header.html'"></div>
 <main>
 	
-	<div class="student-form" ng-controller="AnswerCtrl">
+	<div class="content" ng-controller="AnswerCtrl">
+		
 		<h1 class="title">Question</h1>
+		
 		<form ng-model="answer">
 
 			<div ng-repeat="q in f.q track by $index" class="question-box">
@@ -15,6 +17,7 @@
 
 			<button ng-click="addAns(f, answers)">Submit</button>
 		</form>
+
 	</div>
 
 </main>
