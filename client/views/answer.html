@@ -1,0 +1,26 @@
+<div ng-include="'views/header.html'"></div>
+<main>
+	
+	<div class="content" ng-controller="AnswerCtrl">
+		
+		<h1 class="title">Question</h1>
+		
+		<form ng-model="answer">
+			<!-- Answer {{answers}} -->
+			<!-- {{qs}} -->
+			<div ng-repeat="q in qs track by $index" class="question-box">
+				
+				<h2>{{q.q}}</h2>
+
+				<div bind-html-compile="templates[q.t]"></div>
+
+			</div>
+
+			<button ng-click="addAns(answers)">Submit</button>
+		</form>
+
+	</div>
+
+</main>
+<div ng-include="'views/footer.html'"></div>
+	

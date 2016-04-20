@@ -1,4 +1,4 @@
-atApp.controller('teacherCtrl', function ($scope, DB) {
+atApp.controller('teacherCtrl', function ($scope, AT) {
 	$scope.f = {};
 	$scope.f.q = [];
 	$scope.q = {};
@@ -18,6 +18,8 @@ atApp.controller('teacherCtrl', function ($scope, DB) {
 		var fCopy = angular.copy(f);
 		console.log($scope.f);
 		$scope.var.fs.push(f);
+		f.id=123;
+		AT.addForm(f);
 	}
 
 	$scope.addQuestion = function (q) {

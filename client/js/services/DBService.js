@@ -1,3 +1,5 @@
+// ta bort...
+
 atApp.factory('DB', function ($resource) {
 	// var qs = [];
 	var qs =  

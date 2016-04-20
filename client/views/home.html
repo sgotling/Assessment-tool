@@ -1,8 +1,10 @@
 <div ng-include="'views/header.html'"></div>
-<main>
-	<input type="text" placeholder="questionnaire id"></input>
-
-	<div ng-include="'views/studentForm.html'"></div>
+<main class="home">
+	
+	<form ng-model="q">
+		<input type="text" class="login-input" placeholder="questionnaire id" ng-model="q.id"></input>
+		<span ng-click="start(q)">Go!</span>
+	</form>
 
 </main>
 <div ng-include="'views/footer.html'"></div>
