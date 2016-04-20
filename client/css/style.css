@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800,800italic,700italic,700,600italic,600,400italic,300italic,300");
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  margin: 0;
+}
+h2 {
+  font-family: "Open Sans";
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: center;
+}
+h3 {
+  font-variant: small-caps;
+  font-family: "Open Sans";
+}
+p {
+  font-family: "Open Sans";
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  width: auto;
+}
+form input {
+  padding: 0.2em;
+  font-size: 2em;
+  text-align: center;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+}
+form input[type="radio"] {
+  width: auto;
+  text-align: center;
+  float: left;
+}
+form input[type="checkbox"] {
+  width: auto;
+  text-align: center;
+  float: left;
+}
+form input[type="text"] {
+  width: 100%;
+  text-align: center;
+  float: left;
+  border: none;
+}
+form input[type="submit"] {
+  width: 50%;
+  padding: 0.2em;
+  font-size: 2em;
+  margin: 1em 25%;
+  border: 3px solid #000;
+  background-color: #fff;
+}
+form input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+form button {
+  width: 50%;
+  padding: 0.2em;
+  font-size: 2em;
+  margin: 1em 25%;
+  border: 3px solid #000;
+  background-color: #fff;
+}
+form button:hover {
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+form select {
+  width: 100%;
+  float: left;
+}
+.del {
+  padding: 0 0.5em;
+}
+main {
+  width: 100%;
+  float: left;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+}
+.home {
+  background-image: url("https://pixabay.com/static/uploads/photo/2016/02/07/21/11/computer-1185637_960_720.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 10%;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+.home form {
+  margin: 20% auto;
+  font-family: "Open Sans";
+  width: 30%;
+}
+.home input {
+  width: 79% !important;
+  float: left;
+  padding: 0.3em;
+}
+.home span {
+  padding: 0.2em;
+  font-size: 2em;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  width: 13%;
+  float: left;
+}
+.home span:hover {
+  cursor: pointer;
+}
+.content {
+  width: 80%;
+  margin: 3em 10%;
+  padding: 2em;
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(0,0,0,0.75);
+}
+.my-forms {
+  background-color: #ecf0f1;
+  margin: 30px;
+  min-height: 50px;
+  font-size: 200%;
+  text-align: left;
+  padding: 20px;
+}
+.my-forms .fa {
+  float: right;
+  margin: 10px;
+}
+.my-forms .fa:hover {
+  color: #7f8c8d;
+  cursor: pointer;
+}
+.title {
+  background-color: #000;
+  color: #fff;
+  font-family: "Open Sans";
+  padding: 0.5em;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+.title-input {
+  border: none;
+  width: 100%;
+  font-size: 2em;
+  box-sizing: border-box;
+}
+.question-box {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 1em;
+}
