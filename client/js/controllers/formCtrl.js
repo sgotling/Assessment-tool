@@ -1,4 +1,4 @@
-atApp.controller('FormCtrl', function ($scope, $sce) {
+atApp.controller('FormCtrl', function ($scope, $sce, DB) {
 
 	$scope.qs = [
 		{
@@ -26,6 +26,8 @@ atApp.controller('FormCtrl', function ($scope, $sce) {
 			id: "4"
 		},
 	];
+
+	$scope.qs = DB.getQs();
 
 	$scope.templates = {
 		select : "<select><option ng-repeat='a in q.a'>{{a}}</option></select>",
