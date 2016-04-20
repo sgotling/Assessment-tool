@@ -34,7 +34,6 @@ atApp.factory('AT',function ($resource, $firebase, $firebaseObject) {
 
 
 	this.getLoadedForm = function () {
-		alert()
 		return loadedForm;
 	}
 
