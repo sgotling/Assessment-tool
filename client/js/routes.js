@@ -12,6 +12,10 @@ var routes = function ($routeProvider) {
     	templateUrl	: 'views/teacher.html',
         controller: 'teacherCtrl'
       })
+    .when('/stat', {
+        templateUrl : 'views/stat.html',
+        controller: 'statCtrl'
+      })
     .otherwise({
     	redirectTo	: '/'
     });

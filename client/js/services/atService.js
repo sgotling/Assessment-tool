@@ -10,7 +10,7 @@ atApp.factory('AT',function ($resource, $firebase, $firebaseObject) {
   		f.id = Object.keys(allForms).length; //OBS EJ BRA METOD EFTERSOM MAN KAN SKRIVA ÖVER FORMULÄR OM MAN TAR BORT NÅGOT.
 		rootRef.child("forms/" + f.id).set(f); //Kanske bättre med en lista
 	}
-
+	var allAnswers = null;
 	var allForms = null;
 	var loadedForm = null;
 
@@ -27,6 +27,12 @@ atApp.factory('AT',function ($resource, $firebase, $firebaseObject) {
 
 	}
 	
+	this.loadAllAnswers = function () {
+		rootRef.on("value", function(snapshot) {
+		allAnswers = snapshot.val().answers;
+		})
+
+	}
 
 	this.getAllForms = function () {
 		return allForms;
@@ -37,7 +43,9 @@ atApp.factory('AT',function ($resource, $firebase, $firebaseObject) {
 		return loadedForm;
 	}
 
-
+	this.getAllAnswers = function () {
+		return allAnswers;
+	}
 
 	this.answer = function (f, a) {
 		var ans = {};

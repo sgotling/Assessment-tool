@@ -1,0 +1,6 @@
+<div ng-repeat="(q, ans) in result track by $index">
+	<h1>{{q}}</h1>
+	<div ng-repeat="(a, total) in ans track by $index">
+		<b>{{a}} </b> {{total}}
+	</div>
+</div>
