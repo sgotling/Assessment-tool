@@ -9,7 +9,13 @@ atApp.controller('statCtrl', function ($scope, AT) {
 	},
 	1000);
 
+
 	$scope.getResult = function (r) {
+	/*
+	Skriv om hela denna funktion i mindre delar. Gör om helt. 
+	Skapa ett skelett genom att först kolla vilka frågor och svar som är med. Sen kan man räkna ut hur mycket av varje svar. 
+	Gör en egen funktion för att räkna ut hur många som svarat på varje fråga och hur många som svarat totalt.
+	*/
 		$scope.result = {}
 		for (var key in r) {
 			var ans = r[key].a;
