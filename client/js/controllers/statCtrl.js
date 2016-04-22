@@ -29,7 +29,11 @@ atApp.controller('statCtrl', function ($scope, AT) {
 				}
 			};
 		};
-		console.log($scope.result)
+		// console.log($scope.result)
+		return $scope.result;
 	}
 
+	$scope.testFunction = function (a) {
+		return a + 1;
+	}
 });
